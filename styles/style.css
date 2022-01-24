@@ -10,6 +10,7 @@ body {
 .container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -90,15 +91,22 @@ body {
 }
 
 .open-up__box {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
   margin: 300px;
   transition: transform 0.5s;
-  transform: cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
 }
 .open-up__text {
   font-size: 64px;
   line-height: 18px;
   font-weight: bold;
+  position: absolute;
+  top: 190px;
+  left: 160px;
+  z-index: -1;
 }
 
 .open-up__box:hover .box__reverse {
@@ -110,47 +118,34 @@ body {
 }
 
 .box1 {
-  position: absolute;
-  top: -188px;
-  left: -155px;
   background-color: rgb(207, 73, 73);
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   transition: transform 1.2s;
-  transform: cubic-bezier(0.19, 1, 0.22, 1);
   transform-origin: left top;
 }
 .box2 {
-  position: absolute;
-  top: -188px;
-  left: 45px;
   background-color: rgb(226, 206, 89);
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   transition: transform 1.2s;
-  transform: cubic-bezier(0.19, 1, 0.22, 1);
+
   transform-origin: top right;
 }
 .box3 {
-  position: absolute;
-  top: 10px;
-  left: -155px;
   background-color: rgb(92, 92, 212);
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   transition: transform 1.2s;
-  transform: cubic-bezier(0.19, 1, 0.22, 1);
+
   transform-origin: bottom left;
 }
 
 .box4 {
-  position: absolute;
-  top: 10px;
-  left: 45px;
   background-color: rgb(118, 219, 109);
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   transition: transform 1.2s;
-  transform: cubic-bezier(0.19, 1, 0.22, 1);
+
   transform-origin: right bottom;
 }
